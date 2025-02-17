@@ -1,1 +1,25 @@
- 
+{
+  "manifest_version": 3,
+  "name": "QuickCopy URL",
+  "version": "1.0.0",
+  "description": "Instantly copy the current tab's URL with a simple keyboard shortcut",
+  "permissions": [
+    "activeTab",
+    "commands",
+    "clipboardWrite",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "copy-url": {
+      "suggested_key": {
+        "mac": "Ctrl+Command+C",
+        "default": "Alt+Shift+C"
+      },
+      "description": "Copy current tab URL"
+    }
+  },
+  "author": "meeyzt"
+}
